@@ -1,0 +1,20 @@
+info:
+  name: List student grades
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/v1/education/grades"
+  params:
+    - name: with_absences
+      value: "true"
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
